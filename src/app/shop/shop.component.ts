@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 import { CartService } from '../cart.service';
+import { FilterPipe } from '../filter.pipe';
+
+
   interface Product {
     id: number;
     name: string;
@@ -21,8 +24,15 @@ import { CartService } from '../cart.service';
     styleUrl: './shop.component.css'
   })
   export class ShopComponent {
-    
-  
+searchText:  any="";
+
+  // TrackBy function for *ngFor
+  // trackByIndex(index: number, item: any): number {
+  //   return index;
+  // }
+
+
+     
    products: Product[] = [
       {
           id: 1,
@@ -91,7 +101,7 @@ import { CartService } from '../cart.service';
   constructor(private cartService: CartService) {}
   addToCart(products: Product) {
     this.cartService.addToCart(products );
-    console.log(products);// Add product to the cart
+    // console.log(products);
     alert(`${products.name}: added to cart!`);
   }
   

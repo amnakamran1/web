@@ -24,7 +24,7 @@ export class AddToCartComponent  implements OnInit  {
         this.cartItem = items;
       });
     }
-  
+
     removeItem(index: number) {
 
       this.cartService.removeFromCart(index);

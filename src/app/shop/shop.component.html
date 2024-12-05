@@ -1,31 +1,26 @@
+<div class="shop-container">
+  <h1>Our Collection</h1>
+  <p class="shop-description">Discover our latest styles and best sellers.</p>
 
-<div class="shop-container" >
-    <h1>Our Collection</h1>
-    <p class="shop-description">Discover our latest styles and best sellers.</p>
   
-    <div class="product-grid">
-      <!-- Product Item 1 -->
-       @for(item of products ; track $index){
-        
-          <div class="row">
-        
-        <div class="col-md-4">
-          <div class="product-card">
-            <img [src]="item.imageUrl" alt="Shoes" />
-            <h4>{{item.name}}</h4>
-            <p>{{item.description}}</p>
-            <p>RS {{item.price}}</p>
-            <button (click)="addToCart(item)">
-              <i class="fa fa-cart-plus"></i> Add to Cart
-            </button>
-          
-                   
-          </div>
-        
+
+  <div class="product-grid">
+    <!-- Display products here -->
+    <div
+      class="row"
+      *ngFor="let item of products let i = index; "
+    >
+      <div class="col-md-4">
+        <div class="product-card">
+          <img [src]="item.imageUrl" alt="" />
+          <h4>{{ item.name }}</h4>
+          <p>{{ item.description }}</p>
+          <p>RS {{ item.price }}</p>
+          <button (click)="addToCart(item)">
+            <i class="fa fa-cart-plus"></i> Add to Cart
+          </button>
         </div>
-      
       </div>
-  
-    }
-  
+    </div>
   </div>
+</div>

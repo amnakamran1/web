@@ -1,12 +1,14 @@
-
+<!-- 
 @if (cartItem.length === 0) {
+  <div class="container">
     <div >
       <h1>Your Cart</h1>
       <p>Your cart is empty! Shop please ...</p>
-      <button routerLink="/shop" class="btn btn-primary">Shop Now</button>
+      <button  class="btn btn-primary">Shop Now</button>
+    </div>
     </div>
      }
-    <!-- Display this section only if cart has items -->
+    
      @else{
       <div class="product-grid">
       
@@ -33,4 +35,27 @@
         </div> 
       }
     
+     -->
+     <div class="container" *ngIf="cartItem.length === 0; else cartContent">
+      <h1>Your Cart</h1>
+      <h3>Your cart is empty! Shop please ...</h3>  
+      <button routerLink="shop" class="btn btn-primary">Shop Now</button>
+    </div>
+    
+    <ng-template #cartContent>
+      <div class="product-grid">
+        <div *ngFor="let item of cartItem; let i = index" class="row">
+          <div class="col-md-4">
+            <div class="product-card">
+              <h4>{{ item.name }}</h4>
+              <img [src]="item.imageUrl" alt="Shoes" />
+              <p>{{ item.description }}</p>
+              <p>Rs {{ item.price }}</p>
+              <button (click)="removeItem(i)" class="btn btn-danger">Remove Item</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </ng-template>
     

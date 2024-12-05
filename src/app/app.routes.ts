@@ -5,6 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
+
 export const routes: Routes = [
     {path:'home', component: HomeComponent},
     {path:'about', component: AboutComponent},

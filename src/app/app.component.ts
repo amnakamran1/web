@@ -1,7 +1,9 @@
 import { Component ,OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CartService } from './cart.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'ecomerce';
+  searchText = '';
   public totalItems: number = 0;
   constructor(private cartService: CartService) {}
   ngOnInit(): void {
