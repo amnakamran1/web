@@ -59,9 +59,8 @@ background-color:#f03800;
   display: flex;
   align-items: center;
   position: relative;
-  /* background-color: transparent; */
   border: none;
-  padding: 10px;
+  padding: 8px;
   width: 190px;
   border-radius: 10px;
   margin-left: 20px;
@@ -71,11 +70,6 @@ background-color:#f03800;
 }
 
 
-.cart-button img {
-  width: 50px;
-  height: 25px;
-  margin-right: 10px;
-}
 
 .cart-badge {
   position: absolute;

@@ -108,6 +108,7 @@ searchText:  any="";
   addToCart(item: any): void {
     console.log('Added to cart:', item);
     this.cartService.addToCart(item);
+    alert(`${item.name}: added to cart!`);
   }
     
   
