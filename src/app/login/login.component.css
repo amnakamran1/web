@@ -1,0 +1,7 @@
+.hero h2{
+  text-align: center;
+  background: linear-gradient(to right, #ff914d, #ff6a3c);
+  color: #fff;
+  padding:  20px;
+  border-radius: 10px;
+}

@@ -1,9 +1,10 @@
 <div class="contact-container">
+  <div class="con-hero">
     <h1>Contact Us</h1>
     <p class="contact-description">
       Have questions? We'd love to hear from you. Fill out the form below, and we'll get back to you as soon as possible!
     </p>
-  
+  </div>
     <form class="contact-form"  [formGroup]="studentForm">
       <div class="form-group">
         <label for="name">Your Name</label>
@@ -39,7 +40,7 @@
           }
         </div>
       </div>
-      <button type="submit" style = "background-color:#ff6a3c;"class=" w-100" [disabled]="studentForm.invalid" (click)="onSubmit()">
+      <button type="submit" style = "background-color:#ff6a3c; border: none;" class=" w-100" [disabled]="studentForm.invalid" (click)="onSubmit()">
         Submit
       </button>
     </form>

@@ -19,7 +19,7 @@ import { FilterPipe } from '../filter.pipe';
   @Component({
     selector: 'app-shop',
     standalone: true,
-    imports: [FormsModule,CommonModule],
+    imports: [FormsModule,CommonModule,FilterPipe],
     templateUrl: './shop.component.html',
     styleUrl: './shop.component.css'
   })
@@ -38,7 +38,7 @@ searchText:  any="";
           id: 1,
           name: "Running Shoes",
           price: 5000 ,
-          description: "Comfortable running shoes for everyday use.",
+          description: "Comfortable shoes for everyday use.",
           imageUrl: "images/card-item10.jpg"
       },
       {
@@ -99,13 +99,16 @@ searchText:  any="";
   }
   ];
   constructor(private cartService: CartService) {}
-  addToCart(products: Product) {
-    this.cartService.addToCart(products );
-    // console.log(products);
-    alert(`${products.name}: added to cart!`);
+  // addToCart(products: Product) {
+  //   this.cartService.addToCart(products );
+  //   // console.log(products);
+  //   alert(`${products.name}: added to cart!`);
+  // }
+  
+  addToCart(item: any): void {
+    console.log('Added to cart:', item);
+    this.cartService.addToCart(item);
   }
-  
-  
     
   
   }

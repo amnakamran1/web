@@ -1,18 +1,22 @@
 <div class="shop-container">
-  <h1>Our Collection</h1>
-  <p class="shop-description">Discover our latest styles and best sellers.</p>
-
-  
-
+  <div class="shop-hero">
+    <h1>Our Collection</h1>
+    <p class="shop-description">Discover our latest styles and best sellers.</p>
+    <input class="search-input" [(ngModel)]="searchText" placeholder="Search products" />
+    
+  </div>
+  <br />
   <div class="product-grid">
-    <!-- Display products here -->
-    <div
-      class="row"
-      *ngFor="let item of products let i = index; "
-    >
+    <!-- Check if filtered products are empty -->
+    <div *ngIf="(products | filter: searchText).length === 0" class="no-results">
+      <p>No products match your search.</p>
+    </div>
+    
+    <!-- Display products -->
+    <div class="row" *ngFor="let item of products | filter: searchText; let i = index">
       <div class="col-md-4">
         <div class="product-card">
-          <img [src]="item.imageUrl" alt="" />
+          <img [src]="item.imageUrl" alt="shoes" />
           <h4>{{ item.name }}</h4>
           <p>{{ item.description }}</p>
           <p>RS {{ item.price }}</p>

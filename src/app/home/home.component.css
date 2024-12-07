@@ -7,12 +7,15 @@
     
   }
   .carousel-inner img{
-    width: 100%;
-    height: 100%;
-    object-fit: center;
+    width: 900px;
+
+    height:700px;
+    object-fit: cover;
     cursor: pointer;
  
   }
+    
+  
  /* General Styles */
 .about-container {
     font-family: Arial, sans-serif;
@@ -37,7 +40,7 @@
   }
   
   .about-hero p {
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     margin: 0;
   }
   
@@ -124,19 +127,30 @@
     text-align: center;
   }
   
-  /* Title and Description */
-  .shop-container h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
   
-  .shop-description {
-    font-size: 1.2rem;
-    color: #666;
+  
+
+  .shop-hero {
+    text-align: center;
+    background: linear-gradient(to right, #ff914d, #ff6a3c);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 100px;
     margin-bottom: 30px;
   }
-  
+  .shop-hero p{
+    font-size: 2.0rem;
+    margin: 0;
+  }
+  .shop-new{
+    height: 200px;
+    color:white;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 400px;
+    background: linear-gradient(to right, #ff914d, #ff6a3c);
+  }
   /* Product Grid */
   .product-grid {
     display: grid;

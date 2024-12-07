@@ -1,0 +1,79 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="hero">
+      <h2 class="text-center mb-4">{{title}}  </h2>
+      </div>
+      <form [formGroup]="studentForm" class="p-4 border rounded shadow">
+        
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            formControlName="email"
+          />
+          <div class="text-danger">
+              @if (studentForm.controls['email'].touched && studentForm.controls['email'].errors?.['required']) {
+              <span>This is Required</span>
+              } @else if (studentForm.controls['email'].touched && studentForm.controls['email'].errors?.['email']) {
+              <span>Email format </span>
+              }
+            </div>
+        
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            formControlName="password"
+            
+          />
+          <div class="text-danger">
+              @if (studentForm.controls['password'].touched && studentForm.controls['password'].errors?.['required']) {
+              <span>This is Required</span>
+              } @else if (studentForm.controls['password'].touched && studentForm.controls['password'].errors?.['minlength']) {
+              <span>Min char 4 Required</span>
+              }
+            </div>
+        
+        </div>
+        
+        
+        </div><div class="mb-3">
+          <label for="password" class="form-label"> Forget Password:</label>
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            formControlName=""
+            
+          />
+          <br>
+
+        <button type="submit"  style = "background-color:#ff6a3c;"class=" w-100"  >
+          Login
+        </button><br>
+        <div class="mt-4 text-center">
+          <p><strong>Or connect with</strong></p>
+          <a href="#" class="btn btn-outline-primary me-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="btn btn-outline-info me-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+
+      
+    </div>
+  </form>
+ 
+  </div>
+</div>

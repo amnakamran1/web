@@ -1,30 +1,23 @@
 <nav class="navbar">
   <div class="navbar-logo">
-    <a href="#">STEPUP</a>
+    <img src="images/eeeee.jpg" alt="StepUp Shoes" class="logo" />
+    <!-- <a href="#">STEPUP</a> -->
   </div>
   <div class="navbar-links">
     <a routerLink="home">Home</a>
     <a routerLink="shop">Shop</a>
     <a routerLink="about">About</a>
+    <a routerLink="contact">Contact</a>
     
   </div>
   <div class="navbar-actions">
-    <input  
-      type="search"
-      placeholder="Search..."
-      class="search-input"
-      aria-label="Search"
-      
-      [(ngModel)]="searchText"
-
-    />
-    <!-- <button class="search">Search</button> -->
+    
     <button class="cart-button"    routerLink="add-to-cart">
-      <i class="fa fa-cart-plus" ></i> Add to Cart
+      <i class="fa fa-cart-plus" > Add to Cart</i>
   
       <span class="cart-badge">{{totalItems}}</span>
     </button>
-    <a class="log" routerLink="contact">Login</a>
+    <a class="log" routerLink="login">Login</a>
   </div>
 </nav>
 

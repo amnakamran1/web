@@ -49,13 +49,14 @@
   }
   
   .about-section h2 {
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     margin-bottom: 10px;
     color: #ff6a3c;
   }
   
   .about-section p {
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 25px;
   }
   
   /* Reverse Section for Alternating Layout */
